@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://covers.openlibrary.org data:; connect-src 'self' https://openlibrary.org;">
+    <title>Find Books - Book Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images/finnNew.png" alt="Book logo">
+        </div>
+        <h2>FinnReads</h2>
+        <p>Find Your Desire Books !</p>
+
+        <nav>
+            <a class="menu-link active-menu" href="SearchBook.html">Find Books</a>
+            <a class="menu-link" href="reading_list.html">My Reading List</a>
+            <a class="menu-link" href="recommendations.html">Recommendations</a>
+            <a class="menu-link" href="reading_goal.html">Reading Goal</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <h1>Find Books</h1>
+            <p>Search for books using their title or author.</p>
+
+            <section class="section">
+                <h2>Search Books</h2>
+
+                <label for="searchType">Search by:</label>
+
+                <select id="searchType">
+                    <option value="title">Book Title</option>
+                    <option value="author">Author</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                >
+
+                <button id="searchButton">Search Books</button>
+
+                <p id="message" class="message"></p>
+
+                <div id="results" class="book-grid"></div>
+            </section>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
