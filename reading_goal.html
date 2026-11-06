@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://covers.openlibrary.org data:; connect-src 'self' https://openlibrary.org;">
+    <title>Reading Goal - Book Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+        <div class="sidebar-logo">
+            <img src="images/finnNew.png" alt="Book logo">
+        </div>
+        <h2>FinnReads</h2>
+        <p>Find Your Desire Books !</p>
+
+        <nav>
+            <a class="menu-link" href="SearchBook.html">Find Books</a>
+            <a class="menu-link" href="reading_list.html">My Reading List</a>
+            <a class="menu-link" href="recommendations.html">Recommendations</a>
+            <a class="menu-link active-menu" href="reading_goal.html">Reading Goal</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="container">
+
+            <h1>Reading Goal</h1>
+            <p>Set your reading target and track your progress.</p>
+
+            <section class="section">
+                <h2>Daily Reading Goal Calculator</h2>
+
+                <label for="targetBooks">Target Number of Books:</label>
+                <input type="number" id="targetBooks" min="1" >
+
+                <label for="completedBooks">Books Already Completed:</label>
+                <input type="number" id="completedBooks" min="0">
+
+                <label for="goalDays">Number of Days:</label>
+                <input type="number" id="goalDays" min="1">
+
+                <button id="goalButton">Calculate Reading Goal</button>
+
+                <div id="goalResult"></div>
+            </section>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
+

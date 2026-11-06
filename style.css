@@ -1,0 +1,287 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    background: #748eb3;
+    margin: 0;
+    color: #040606;
+}
+
+h1, h2, h3 {
+    color: #040606;
+}
+
+/* MAIN LAYOUT */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 245px;
+    min-width: 245px;
+    background: #f8f7fb;
+    color: #4f6789;
+    padding: 28px 16px;
+}
+
+.sidebar h2 {
+    color: #4f6789;
+    margin: 0 0 8px;
+    padding: 0 12px;
+}
+
+.sidebar p {
+    color: #4f6789;
+    font-size: 13px;
+    padding: 0 12px;
+    margin-bottom: 30px;
+}
+
+/* SIDEBAR IMAGE */
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+/* CENTRE SIDEBAR HEADING AND TAGLINE ON ALL PAGES */
+.sidebar h2,
+.sidebar p {
+    text-align: center;
+}
+.menu-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: left;
+    margin: 8px 0;
+    padding: 14px 15px;
+    border-radius: 7px;
+    background: transparent;
+    color: #4f6789;
+    font-size: 15px;
+}
+
+.menu-link:hover,
+.menu-link.active-menu {
+    background: #b2cca0;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 28px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SECTIONS */
+.section {
+    background: white;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* INPUTS AND BUTTONS */
+input, select {
+    padding: 11px;
+    margin: 7px 5px 7px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 11px 16px;
+    margin: 5px;
+    background:  #4f6789;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #392d5c;
+}
+
+label {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.message {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* BOOK CARDS */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.book-card,
+.saved-book-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.book-card img,
+.saved-book-card img {
+    width: 120px;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.book-card h3,
+.saved-book-card h3 {
+    font-size: 17px;
+    color: #392d5c;
+}
+
+.book-card p,
+.saved-book-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.saved-book-card select,
+.saved-book-card input,
+.saved-book-card button {
+    width: 100%;
+    margin: 6px 0;
+}
+.book-cover-placeholder {
+    width: 120px;
+    height: 170px;
+    background: #e9e3f2;
+    color: #59468b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    border: 1px solid #d5cce3;
+    text-align: center;
+}
+
+.book-cover-placeholder span {
+    font-size: 35px;
+}
+
+.book-cover-placeholder p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* GENRE BUTTONS */
+.genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* READING GOAL */
+.calculator-result {
+    background: #f1eef8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.progress-container {
+    background: #ddd;
+    height: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    background: #59468b;
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 18px 12px;
+    }
+
+    .sidebar p {
+        margin-bottom: 12px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu-link {
+        width: auto;
+        margin: 3px;
+    }
+
+    .main-content {
+        padding: 14px;
+    }
+
+    input, select {
+        max-width: 100%;
+    }
+
+    /* EDIT BOOK COVER */
+
+.edit-book-cover {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.edit-book-cover img {
+    width: 150px;
+    height: 210px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+}

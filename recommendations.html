@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://covers.openlibrary.org data:; connect-src 'self' https://openlibrary.org;">
+    <title>Recommendations - Book Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images/finnNew.png" alt="Book logo">
+        </div>
+        <h2>FinnReads</h2>
+        <p>Find Your Desire Books !</p>
+
+        <nav>
+            <a class="menu-link" href="SearchBook.html">Find Books</a>
+            <a class="menu-link" href="reading_list.html">My Reading List</a>
+            <a class="menu-link active-menu" href="recommendations.html">Recommendations</a>
+            <a class="menu-link" href="reading_goal.html">Reading Goal</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="container">
+
+            <h1>Book Recommendations</h1>
+
+            <section class="section">
+                <h2>Genre List</h2>
+                <p>Choose Your Genre</p>
+
+                <div class="genre-buttons">
+                    <button class="genre-button" data-genre="fantasy">Fantasy</button>
+                    <button class="genre-button" data-genre="romance">Romance</button>
+                    <button class="genre-button" data-genre="mystery">Mystery</button>
+                    <button class="genre-button" data-genre="science fiction">Science Fiction</button>
+                    <button class="genre-button" data-genre="horror">Horror</button>
+                    <button class="genre-button" data-genre="adventure">Adventure</button>
+                </div>
+
+                <p id="recommendMessage" class="message"></p>
+
+                <div id="recommendResults" class="book-grid"></div>
+            </section>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
